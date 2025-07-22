@@ -94,20 +94,20 @@ const handleSubmit = async () => {
   setLoading(true);
   setAlert({ type: null, message: null });
 
-  try {
-    const response = await axios.post<ContactResponse>(`${API_URL}/contact`, formData);
-    if (response.data.success) {
-      setAlert({ type: 'success', message: 'Your message has been sent successfully!' });
-      setFormData({ name: '', email: '', subject: '', message: '', product: '' });
-    } else {
-      throw new Error(response.data.message || 'Failed to send message');
-    }
-  } catch (error) {
-    console.error('Error submitting contact form:', error);
-    setAlert({ type: 'error', message: 'Failed to send your message. Please try again.' });
-  } finally {
-    setLoading(false);
-  }
+  // try {
+  //   const response = await axios.post<ContactResponse>(`${API_URL}/contact`, formData);
+  //   if (response.data.success) {
+  //     setAlert({ type: 'success', message: 'Your message has been sent successfully!' });
+  //     setFormData({ name: '', email: '', subject: '', message: '', product: '' });
+  //   } else {
+  //     throw new Error(response.data.message || 'Failed to send message');
+  //   }
+  // } catch (error) {
+  //   console.error('Error submitting contact form:', error);
+  //   setAlert({ type: 'error', message: 'Failed to send your message. Please try again.' });
+  // } finally {
+  //   setLoading(false);
+  // }
 };
 
   return (
@@ -267,7 +267,7 @@ const handleSubmit = async () => {
                             Email Us
                           </Typography>
                         </Box>
-                        <Link 
+                        {/* <Link 
                           href="mailto:expensessuite@fincoopers.in"
                           sx={{ 
                             color: '#4E36FF',
@@ -280,7 +280,7 @@ const handleSubmit = async () => {
                           }}
                         >
                           expensessuite@fincoopers.in
-                        </Link>
+                        </Link> */}
                         <Typography variant="body2" sx={{ mt: 0.8, fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.7)' }}>
                           Our team is ready to assist you via email
                         </Typography>

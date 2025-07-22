@@ -153,21 +153,6 @@ const Footer = () => {
                   Subscribe
                 </Button>
               </Box>
-              <Box mt={4}>
-                <Typography variant="h6" fontWeight="bold" mb={1}>
-                  Contact Us
-                </Typography>
-                <Link href="mailto:expensessuite@fincoopers.in" style={{ textDecoration: 'none' }}>
-                  <Typography variant="body2" color="grey.400">
-                    Email: expensessuite@fincoopers.in
-                  </Typography>
-                </Link>
-                <Link href="tel:+919302075637" style={{ textDecoration: 'none' }}>
-                  <Typography variant="body2" color="grey.400">
-                    Phone: +91 9302075637
-                  </Typography>
-                </Link>
-              </Box>
             </FadeIn>
           </Grid>
         </Grid>
