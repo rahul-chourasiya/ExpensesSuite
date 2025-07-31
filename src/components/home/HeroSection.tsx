@@ -47,7 +47,6 @@ const HeroSection = () => {
       },
     },
   };
-
   const statsVariants = {
     hidden: { opacity: 0, x: -30 },
     visible: {
@@ -142,56 +141,7 @@ const HeroSection = () => {
         />
       ))}
 
-      {/* Floating Stats */}
-      {/* {floatingStats.map((stat, index) => (
-        <motion.div
-          key={index}
-          variants={statsVariants}
-          initial="hidden"
-          animate={controls}
-          style={{
-            position: 'absolute',
-            left: { xs: '5%', md: index === 0 ? '5%' : index === 1 ? '5%' : '90%' },
-            top: { xs: `${20 + index * 15}%`, md: index === 0 ? '20%' : index === 1 ? '60%' : '40%' },
-            zIndex: 5,
-            transform: { xs: 'none', md: index === 2 ? 'translateX(-100%)' : 'none' },
-          }}
-        >
-          <Box
-            sx={{
-              background: 'rgba(255, 255, 255, 0.1)',
-              backdropFilter: 'blur(10px)',
-              borderRadius: '16px',
-              p: { xs: 1.5, sm: 2 },
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 1.5,
-              boxShadow: `0 8px 32px rgba(${parseInt(theme.palette.primary.main.slice(1, 3), 16)}, ${parseInt(theme.palette.primary.main.slice(3, 5), 16)}, ${parseInt(theme.palette.primary.main.slice(5, 7), 16)}, 0.3)`,
-            }}
-          >
-            <Box
-              sx={{
-                color: theme.palette.primary.main,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              {stat.icon}
-            </Box>
-            <Box>
-              <Typography variant="h6" sx={{ color: 'white', fontWeight: 'bold', lineHeight: 1, fontSize: { xs: '1rem', sm: '1.25rem' } }}>
-                {stat.value}
-              </Typography>
-              <Typography variant="caption" sx={{ color: theme.palette.grey[400], lineHeight: 1, fontSize: { xs: '0.75rem', sm: '0.875rem' } }}>
-                {stat.label}
-              </Typography>
-            </Box>
-          </Box>     
-        </motion.div>
-      ))} */}
-
+ 
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 10, py: 4 }}>
         <Grid container spacing={4} alignItems="center" sx={{ minHeight: '100vh' }}>
           {/* Left Content Section */}
@@ -298,7 +248,6 @@ const HeroSection = () => {
                         background: `linear-gradient(45deg, ${theme.palette.primary.dark}, ${theme.palette.secondary.dark})`,
                       },
                     }}
-                    // onClick={() => {/* Add demo booking logic */}}
                   >
                     Book a Free Demo
                   </Button>
@@ -322,7 +271,6 @@ const HeroSection = () => {
                         transform: 'translateY(-2px)',
                       },
                     }}
-                    // onClick={() => {/* Add learn more navigation logic */}}
                   >
                     Learn More
                   </Button>
@@ -335,7 +283,7 @@ const HeroSection = () => {
                   variant="body2"
                   sx={{ color: theme.palette.grey[500], mb: 3, fontWeight: '500', textAlign: { xs: 'center', sm: 'left' } }}
                 >
-                  Trusted by leading companies
+                  Trusted by leading companie
                 </Typography>
                 <Box
                   sx={{
